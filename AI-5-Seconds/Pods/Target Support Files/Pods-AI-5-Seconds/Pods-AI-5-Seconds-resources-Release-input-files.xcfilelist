@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-AI-5-Seconds/Pods-AI-5-Seconds-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/Google-Mobile-Ads-SDK/GoogleMobileAdsResources.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/GoogleUserMessagingPlatform/UserMessagingPlatformResources.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/UnityAds/UnityAdsResources.bundle

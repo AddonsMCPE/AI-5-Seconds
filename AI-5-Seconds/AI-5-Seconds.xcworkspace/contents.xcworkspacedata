@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:AI-5-Seconds.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:Features"
+      name = "Features">
+      <FileRef
+         location = "container:AI-5-Seconds-Minor/AI-5-Seconds-Minor.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "container:AI-5-Seconds-WebView/AI-5-Seconds-WebView.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "container:AI-5-Seconds-Game/AI-5-Seconds-Game.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "container:AI-5-Seconds-Splash/AI-5-Seconds-Splash.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "container:AI-5-Seconds-Onboarding/AI-5-Seconds-Onboarding.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "container:AI-5-Seconds-Paywall/AI-5-Seconds-Paywall.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Shared"
+      name = "Shared">
+      <FileRef
+         location = "container:AI-5-Seconds-Services/AI-5-Seconds-Services.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "container:AI-5-Seconds-UI/AI-5-Seconds-UI.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

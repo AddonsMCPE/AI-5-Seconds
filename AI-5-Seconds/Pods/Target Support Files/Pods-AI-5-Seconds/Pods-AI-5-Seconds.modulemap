@@ -1,0 +1,6 @@
+framework module Pods_AI_5_Seconds {
+  umbrella header "Pods-AI-5-Seconds-umbrella.h"
+
+  export *
+  module * { export * }
+}

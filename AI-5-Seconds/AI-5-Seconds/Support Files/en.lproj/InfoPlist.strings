@@ -1,0 +1,14 @@
+/* 
+  InfoPlist.strings
+  AI-Charades
+
+  Created by Oleksandr Yakobshe on 12.10.2025.
+  
+*/
+
+"NSUserTrackingUsageDescription" = "Turn on personalized ads for content that fits you.";
+"NSCameraUsageDescription" = "Camera is needed to record video during Charades rounds.";
+"NSMicrophoneUsageDescription" = "Microphone is needed to record audio during Charades rounds.";
+"NSPhotoLibraryUsageDescription" = "The permission is required to save videos to the library.";
+
+"CFBundleDisplayName" = "AI Charades - guess the word";

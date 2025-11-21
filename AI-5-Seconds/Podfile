@@ -1,0 +1,275 @@
+platform :ios, '15.5'
+ENV['SWIFT_VERSION'] = '5'
+inhibit_all_warnings!
+use_frameworks!
+
+workspace 'AI-5-Seconds'
+
+# MARK: - Pods
+
+def facebookCore
+	pod 'FBSDKCoreKit', '= 18.0.0'
+end
+
+def unityAds
+	pod 'UnityAds', '= 4.14.1'
+end
+
+def googleMobileAds
+	pod 'Google-Mobile-Ads-SDK', '= 12.12.0'
+end
+
+def firebaseAnalytics
+	pod 'Firebase/Analytics', '= 12.3.0'
+end
+
+def firebaseCrashlytics
+	pod 'Firebase/Crashlytics', '= 12.3.0'
+end
+
+def swiftyStoreKit
+	pod 'SwiftyStoreKit', '= 0.16.1'
+end
+
+def googleUtilities
+	pod 'GoogleUtilities', '= 8.1.0'
+end
+
+def firebaseRemoteConfig
+	pod 'Firebase/RemoteConfig', '= 12.3.0'
+end
+
+def lottie
+	pod 'lottie-ios', '= 3.4.1'
+end
+
+def swiftyJSON
+	pod 'SwiftyJSON', '= 5.0.1'
+end
+
+def firebaseMessaging
+	pod 'Firebase/Messaging', '= 12.3.0'
+end
+
+def iCarousel
+	pod 'iCarousel', '= 1.8.3'
+end
+
+target 'AI-5-Seconds' do
+	project 'AI-5-Seconds'
+	firebaseAnalytics
+	firebaseCrashlytics
+	firebaseRemoteConfig
+	firebaseMessaging
+	googleUtilities
+	facebookCore
+	googleMobileAds
+	unityAds
+	lottie
+	swiftyJSON
+	swiftyStoreKit
+	iCarousel
+end
+
+target 'AI-5-Seconds-Splash' do
+	project 'AI-5-Seconds-Splash/AI-5-Seconds-Splash'
+	swiftyStoreKit
+	facebookCore
+	lottie
+end
+
+target 'AI-5-Seconds-Paywall' do
+	project 'AI-5-Seconds-Paywall/AI-5-Seconds-Paywall'
+	swiftyStoreKit
+end
+
+target 'AI-5-Seconds-Minor' do
+	project 'AI-5-Seconds-Minor/AI-5-Seconds-Minor'
+	swiftyStoreKit
+	iCarousel
+end
+
+target 'AI-5-Seconds-Onboarding' do
+	project 'AI-5-Seconds-Onboarding/AI-5-Seconds-Onboarding'
+	swiftyStoreKit
+end
+
+target 'AI-5-Seconds-Services' do
+	project 'AI-5-Seconds-Services/AI-5-Seconds-Services'
+	firebaseAnalytics
+	firebaseRemoteConfig
+	googleUtilities
+	facebookCore
+	googleMobileAds
+	swiftyStoreKit
+	unityAds
+	swiftyJSON
+end
+
+target 'AI-5-Seconds-UI' do
+	project 'AI-5-Seconds-UI/AI-5-Seconds-UI'
+	lottie
+end
+
+# MARK: - Hooks
+
+post_install do |installer|
+	# This bug has been reported to the cocoapods project developers here:
+	#     https://github.com/CocoaPods/CocoaPods/issues/12539
+	target_pods_resources_path = "Pods/Target Support Files/Pods-AI-5-Seconds/Pods-AI-5-Seconds-resources.sh"
+	string_to_replace = '--compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"'
+	assets_compile_with_app_icon_arguments = '--compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}" --include-all-app-icons'
+	text = File.read(target_pods_resources_path)
+	new_contents = text.gsub(string_to_replace, assets_compile_with_app_icon_arguments)
+	File.open(target_pods_resources_path, "w") {|file| file.puts new_contents }
+	
+	installer.aggregate_targets.each do |target|
+		target.xcconfigs.each do |config_name, config_file|
+			path = config_file.attributes['LD_RUNPATH_SEARCH_PATHS'] + ' ' + '$(FRAMEWORK_SEARCH_PATHS)'
+			config_file.attributes['LD_RUNPATH_SEARCH_PATHS'] = path
+			
+			xcconfig_path = target.xcconfig_path(config_name)
+			config_file.save_as(xcconfig_path)
+		end
+	end
+	
+	installer.pods_project.targets.each do |target|
+		target.build_configurations.each do |config|
+			config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.5'
+			config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
+			config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+			config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
+		end
+	end
+	
+	installer.pods_project.targets.each do |target|
+		target.build_configurations.each do |config|
+		xcconfig_path = config.base_configuration_reference.real_path
+		xcconfig = File.read(xcconfig_path)
+		xcconfig_mod = xcconfig.gsub(/DT_TOOLCHAIN_DIR/, "TOOLCHAIN_DIR")
+		File.open(xcconfig_path, "w") { |file| file << xcconfig_mod }
+		end
+	end
+	
+	installer.generated_projects.each do |project|
+		project.targets.each do |target|
+				target.build_configurations.each do |config|
+						config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+				 end
+		end
+	end
+	
+	app_targets = ['Pods-AI-5-Seconds']
+	framework_names = [
+	'Adapty',
+	'Alamofire',
+	'AppsFlyerFramework',
+	'AppsFlyerFramework/Main',
+	'BranchSDK',
+	'CropViewController',
+	'FBAEMKit',
+	'FBAudienceNetwork',
+	'FBSDKCoreKit',
+	'FBSDKCoreKit_Basics',
+	'FBSDKLoginKit',
+	'FBSDKShareKit',
+	'FIRAnalyticsConnector',
+	'GADMediationAdapterFacebook',
+	'GTMSessionFetcher/Core',
+	'Google-Mobile-Ads-SDK',
+	'GoogleAdsOnDeviceConversion',
+	'GoogleAdsOnDeviceConversion.framework',
+	'GoogleAnalytics',
+	'GoogleAppMeasurement',
+	'GoogleAppMeasurement/AdIdSupport',
+	'GoogleAppMeasurement/Default',
+	'GoogleAppMeasurement/IdentitySupport',
+	'GoogleAppMeasurement/WithoutAdIdSupport',
+	'GoogleDataTransport',
+	'GoogleDataTransportCCTSupport',
+	'GoogleMLKit',
+	'GoogleMLKit/MLKitCore',
+	'GoogleMLKit/Translate',
+	'GoogleMobileAds',
+	'GoogleMobileAdsMediationFacebook',
+	'GoogleTagManager',
+	'GoogleToolboxForMac',
+	'GoogleToolboxForMac/DebugUtils',
+	'GoogleToolboxForMac/Defines',
+	'GoogleToolboxForMac/Logger',
+	'GoogleToolboxForMac/NSData+zlib',
+	'GoogleToolboxForMac/NSDictionary+URLArguments',
+	'GoogleToolboxForMac/NSString+URLArguments',
+	'GoogleToolboxForMac/StringEncoding',
+	'GoogleUserMessagingPlatform',
+	'GoogleUtilities',
+	'GoogleUtilities/AppDelegateSwizzler',
+	'GoogleUtilities/Environment',
+	'GoogleUtilities/ISASwizzler',
+	'GoogleUtilities/Logger',
+	'GoogleUtilities/MethodSwizzler',
+	'GoogleUtilities/Network',
+	'GoogleUtilities/NSData+zlib',
+	'GoogleUtilities/Privacy',
+	'GoogleUtilities/Reachability',
+	'GoogleUtilities/Support Files',
+	'GoogleUtilities/SwizzlerTestHelpers',
+	'GoogleUtilities/UserDefaults',
+	'Moya',
+	'Moya/Core',
+	'MLKitCommon',
+	'MLKitNaturalLanguage',
+	'MLKitTranslate',
+	'PromisesObjC',
+	'PromisesSwift',
+	'Protobuf',
+	'SSZipArchive',
+	'SwiftyJSON',
+	'SwiftyStoreKit',
+	'TensorFlowLiteTaskVision',
+	'UserMessagingPlatform',
+	'iCarousel',
+	'lottie-ios',
+	'nanopb',
+	'nanopb/decode',
+	'nanopb/encode',
+	'Firebase',
+	'Firebase/Analytics',
+	'Firebase/Core',
+	'Firebase/CoreOnly',
+	'Firebase/Crashlytics',
+	'Firebase/Messaging',
+	'Firebase/RemoteConfig',
+	'FirebaseABTesting',
+	'FirebaseAnalytics',
+	'FirebaseAnalytics/AdIdSupport',
+	'FirebaseCore',
+	'FirebaseCoreDiagnostics',
+	'FirebaseCoreDiagnosticsInterop',
+	'FirebaseCoreExtension',
+	'FirebaseCoreInternal',
+	'FirebaseCrashlytics',
+	'FirebaseInstanceID',
+	'FirebaseInstallations',
+	'FirebaseMessaging',
+	'FirebaseRemoteConfigInterop',
+	'FirebaseSessions',
+	'APMPlatformIdentitySupport',
+	'PodsDummy_Google_Mobile_Ads_SDK',
+	'PodsDummy_GoogleAppMeasurementIdentitySupport',
+	'GADBannerSignalRequestBridge',
+	'UnityAds'
+	]
+
+	installer.aggregate_targets.select { |target| app_targets.include? target.name }.each do |target|
+		target.xcconfigs.each do |config_name, config_file|
+			framework_names.each do |framework_name|
+				puts "Removing #{framework_name} from OTHER_LDFLAGS of target #{target.name}"
+				config_file.frameworks.delete(framework_name)
+			end
+
+			xcconfig_path = target.xcconfig_path(config_name)
+			config_file.save_as(xcconfig_path)
+		end
+	end
+end

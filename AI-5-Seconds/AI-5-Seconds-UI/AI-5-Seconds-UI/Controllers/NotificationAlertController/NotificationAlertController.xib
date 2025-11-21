@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationAlertController" customModule="Minecraft_mods_UI" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Nsh-DC-xKI" customClass="NotificationAlertView" customModule="Minecraft_mods_UI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="79"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLC-CL-90I">
+                    <rect key="frame" x="0.0" y="0.0" width="334" height="79"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageNotificatioBGDestructive" translatesAutoresizingMaskIntoConstraints="NO" id="1Ik-sf-wsd">
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="79"/>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pLL-fs-R6M">
+                            <rect key="frame" x="16" y="2" width="310" height="75"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4P8-cv-6Ng">
+                                    <rect key="frame" x="0.0" y="27.333333333333336" width="258" height="20.333333333333336"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp7-8U-4gv" customClass="IconButton" customModule="Minecraft_mods_UI" customModuleProvider="target">
+                                    <rect key="frame" x="266" y="15.666666666666671" width="44" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="41P-Mi-cPK"/>
+                                        <constraint firstAttribute="height" constant="44" id="Jeh-Me-klL"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="1Ik-sf-wsd" secondAttribute="trailing" id="5rV-fj-9Su"/>
+                        <constraint firstItem="pLL-fs-R6M" firstAttribute="top" secondItem="OLC-CL-90I" secondAttribute="top" constant="2" id="7h4-uf-pZd"/>
+                        <constraint firstAttribute="bottom" secondItem="1Ik-sf-wsd" secondAttribute="bottom" id="Eom-Kr-LLV"/>
+                        <constraint firstAttribute="width" constant="334" id="H0F-RS-6QT"/>
+                        <constraint firstAttribute="trailing" secondItem="pLL-fs-R6M" secondAttribute="trailing" constant="8" id="YYi-gf-0LT"/>
+                        <constraint firstItem="1Ik-sf-wsd" firstAttribute="top" secondItem="OLC-CL-90I" secondAttribute="top" id="ZOI-0w-ZOC"/>
+                        <constraint firstItem="1Ik-sf-wsd" firstAttribute="leading" secondItem="OLC-CL-90I" secondAttribute="leading" id="chX-QU-9Ud"/>
+                        <constraint firstAttribute="bottom" secondItem="pLL-fs-R6M" secondAttribute="bottom" constant="2" id="czY-9v-qGi"/>
+                        <constraint firstItem="pLL-fs-R6M" firstAttribute="leading" secondItem="OLC-CL-90I" secondAttribute="leading" constant="16" id="fon-fo-9vW"/>
+                        <constraint firstItem="pLL-fs-R6M" firstAttribute="centerY" secondItem="OLC-CL-90I" secondAttribute="centerY" id="qaM-aD-MKx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="OLC-CL-90I" firstAttribute="top" secondItem="Nsh-DC-xKI" secondAttribute="top" id="4dZ-ra-Q7M"/>
+                <constraint firstAttribute="bottom" secondItem="OLC-CL-90I" secondAttribute="bottom" id="Iii-E2-ZDl"/>
+                <constraint firstAttribute="trailing" secondItem="OLC-CL-90I" secondAttribute="trailing" id="hYa-nP-IbK"/>
+                <constraint firstItem="OLC-CL-90I" firstAttribute="leading" secondItem="Nsh-DC-xKI" secondAttribute="leading" id="mt9-uK-0ic"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgImageView" destination="1Ik-sf-wsd" id="Ta6-v5-jnE"/>
+                <outlet property="closeButton" destination="Kp7-8U-4gv" id="8qb-N0-ioQ"/>
+                <outlet property="mainView" destination="OLC-CL-90I" id="hnq-J3-5sn"/>
+                <outlet property="titleLabel" destination="4P8-cv-6Ng" id="cJY-Is-Mxw"/>
+            </connections>
+            <point key="canvasLocation" x="192.36641221374046" y="168.66197183098592"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imageNotificatioBGDestructive" width="442" height="222"/>
+    </resources>
+</document>

@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		063F49E796D5CE92E9B0D5DA /* Pods_AI_5_Seconds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55F1458A5034489FEE2D848 /* Pods_AI_5_Seconds.framework */; };
+		4D92752E2ED0A4CC00F72EF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9275252ED0A4CC00F72EF4 /* Assets.xcassets */; };
+		4D9275302ED0A4CC00F72EF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9275282ED0A4CC00F72EF4 /* LaunchScreen.storyboard */; };
+		4D9275322ED0A4CC00F72EF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9275242ED0A4CC00F72EF4 /* AppDelegate.swift */; };
+		4D92754F2ED0B32A00F72EF4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D92754E2ED0B32A00F72EF4 /* GoogleService-Info.plist */; };
+		4D9275542ED104E500F72EF4 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9275522ED104E500F72EF4 /* OnboardingRouter.swift */; };
+		4D9275552ED104E500F72EF4 /* WebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9275532ED104E500F72EF4 /* WebViewRouter.swift */; };
+		4D9275562ED104E500F72EF4 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9275502ED104E500F72EF4 /* RootRouter.swift */; };
+		4D9275572ED104E500F72EF4 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9275512ED104E500F72EF4 /* SplashRouter.swift */; };
+		4D92762F2ED10D0F00F72EF4 /* AI_5_Seconds_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D92762E2ED10D0F00F72EF4 /* AI_5_Seconds_Game.framework */; };
+		4D9276302ED10D0F00F72EF4 /* AI_5_Seconds_Game.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D92762E2ED10D0F00F72EF4 /* AI_5_Seconds_Game.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D9276332ED10D1300F72EF4 /* AI_5_Seconds_Minor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9276322ED10D1300F72EF4 /* AI_5_Seconds_Minor.framework */; };
+		4D9276342ED10D1300F72EF4 /* AI_5_Seconds_Minor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9276322ED10D1300F72EF4 /* AI_5_Seconds_Minor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D9276362ED10D1500F72EF4 /* AI_5_Seconds_Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9276352ED10D1500F72EF4 /* AI_5_Seconds_Onboarding.framework */; };
+		4D9276372ED10D1500F72EF4 /* AI_5_Seconds_Onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9276352ED10D1500F72EF4 /* AI_5_Seconds_Onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D9276392ED10D1800F72EF4 /* AI_5_Seconds_Paywall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9276382ED10D1800F72EF4 /* AI_5_Seconds_Paywall.framework */; };
+		4D92763A2ED10D1800F72EF4 /* AI_5_Seconds_Paywall.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9276382ED10D1800F72EF4 /* AI_5_Seconds_Paywall.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D92763C2ED10D1B00F72EF4 /* AI_5_Seconds_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D92763B2ED10D1B00F72EF4 /* AI_5_Seconds_Services.framework */; };
+		4D92763D2ED10D1B00F72EF4 /* AI_5_Seconds_Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D92763B2ED10D1B00F72EF4 /* AI_5_Seconds_Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D92763F2ED10D1D00F72EF4 /* AI_5_Seconds_Splash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D92763E2ED10D1D00F72EF4 /* AI_5_Seconds_Splash.framework */; };
+		4D9276402ED10D1D00F72EF4 /* AI_5_Seconds_Splash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D92763E2ED10D1D00F72EF4 /* AI_5_Seconds_Splash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D9276422ED10D2000F72EF4 /* AI_5_Seconds_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9276412ED10D2000F72EF4 /* AI_5_Seconds_UI.framework */; };
+		4D9276432ED10D2000F72EF4 /* AI_5_Seconds_UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9276412ED10D2000F72EF4 /* AI_5_Seconds_UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D9276452ED10D2300F72EF4 /* AI_5_Seconds_WebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9276442ED10D2300F72EF4 /* AI_5_Seconds_WebView.framework */; };
+		4D9276462ED10D2300F72EF4 /* AI_5_Seconds_WebView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9276442ED10D2300F72EF4 /* AI_5_Seconds_WebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D9276312ED10D0F00F72EF4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4D9276372ED10D1500F72EF4 /* AI_5_Seconds_Onboarding.framework in Embed Frameworks */,
+				4D9276342ED10D1300F72EF4 /* AI_5_Seconds_Minor.framework in Embed Frameworks */,
+				4D9276432ED10D2000F72EF4 /* AI_5_Seconds_UI.framework in Embed Frameworks */,
+				4D92763D2ED10D1B00F72EF4 /* AI_5_Seconds_Services.framework in Embed Frameworks */,
+				4D9276402ED10D1D00F72EF4 /* AI_5_Seconds_Splash.framework in Embed Frameworks */,
+				4D9276302ED10D0F00F72EF4 /* AI_5_Seconds_Game.framework in Embed Frameworks */,
+				4D9276462ED10D2300F72EF4 /* AI_5_Seconds_WebView.framework in Embed Frameworks */,
+				4D92763A2ED10D1800F72EF4 /* AI_5_Seconds_Paywall.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4D92750C2ED0A4C400F72EF4 /* AI-5-Seconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI-5-Seconds.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9275242ED0A4CC00F72EF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D9275252ED0A4CC00F72EF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D9275262ED0A4CC00F72EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D9275272ED0A4CC00F72EF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D9275392ED0AFD400F72EF4 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4D92754D2ED0AFD400F72EF4 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		4D92754E2ED0B32A00F72EF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D9275502ED104E500F72EF4 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		4D9275512ED104E500F72EF4 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		4D9275522ED104E500F72EF4 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		4D9275532ED104E500F72EF4 /* WebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
+		4D92762E2ED10D0F00F72EF4 /* AI_5_Seconds_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AI_5_Seconds_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9276322ED10D1300F72EF4 /* AI_5_Seconds_Minor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AI_5_Seconds_Minor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9276352ED10D1500F72EF4 /* AI_5_Seconds_Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AI_5_Seconds_Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9276382ED10D1800F72EF4 /* AI_5_Seconds_Paywall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AI_5_Seconds_Paywall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D92763B2ED10D1B00F72EF4 /* AI_5_Seconds_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AI_5_Seconds_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D92763E2ED10D1D00F72EF4 /* AI_5_Seconds_Splash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AI_5_Seconds_Splash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9276412ED10D2000F72EF4 /* AI_5_Seconds_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AI_5_Seconds_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9276442ED10D2300F72EF4 /* AI_5_Seconds_WebView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AI_5_Seconds_WebView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82BE078DF1CFCADE8C3FC47B /* Pods-AI-5-Seconds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-5-Seconds.release.xcconfig"; path = "Target Support Files/Pods-AI-5-Seconds/Pods-AI-5-Seconds.release.xcconfig"; sourceTree = "<group>"; };
+		A55F1458A5034489FEE2D848 /* Pods_AI_5_Seconds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AI_5_Seconds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE24C60F129EC9419272925B /* Pods-AI-5-Seconds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-5-Seconds.debug.xcconfig"; path = "Target Support Files/Pods-AI-5-Seconds/Pods-AI-5-Seconds.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D9275092ED0A4C400F72EF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D92762F2ED10D0F00F72EF4 /* AI_5_Seconds_Game.framework in Frameworks */,
+				4D9276452ED10D2300F72EF4 /* AI_5_Seconds_WebView.framework in Frameworks */,
+				4D9276362ED10D1500F72EF4 /* AI_5_Seconds_Onboarding.framework in Frameworks */,
+				4D92763C2ED10D1B00F72EF4 /* AI_5_Seconds_Services.framework in Frameworks */,
+				4D9276332ED10D1300F72EF4 /* AI_5_Seconds_Minor.framework in Frameworks */,
+				4D9276392ED10D1800F72EF4 /* AI_5_Seconds_Paywall.framework in Frameworks */,
+				4D92763F2ED10D1D00F72EF4 /* AI_5_Seconds_Splash.framework in Frameworks */,
+				4D9276422ED10D2000F72EF4 /* AI_5_Seconds_UI.framework in Frameworks */,
+				063F49E796D5CE92E9B0D5DA /* Pods_AI_5_Seconds.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D9275032ED0A4C400F72EF4 = {
+			isa = PBXGroup;
+			children = (
+				4D92752D2ED0A4CC00F72EF4 /* AI-5-Seconds */,
+				4D92750D2ED0A4C400F72EF4 /* Products */,
+				5A175954DAEA7FE64B45672A /* Pods */,
+				D8722C571068345B385C66BE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4D92750D2ED0A4C400F72EF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D92750C2ED0A4C400F72EF4 /* AI-5-Seconds.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D92752D2ED0A4CC00F72EF4 /* AI-5-Seconds */ = {
+			isa = PBXGroup;
+			children = (
+				4D9275242ED0A4CC00F72EF4 /* AppDelegate.swift */,
+				4D9275362ED0AF3700F72EF4 /* Routing */,
+				4D9275372ED0AF4100F72EF4 /* Support Files */,
+				4D9275382ED0AF5600F72EF4 /* Resources */,
+			);
+			path = "AI-5-Seconds";
+			sourceTree = "<group>";
+		};
+		4D9275362ED0AF3700F72EF4 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				4D9275502ED104E500F72EF4 /* RootRouter.swift */,
+				4D9275512ED104E500F72EF4 /* SplashRouter.swift */,
+				4D9275522ED104E500F72EF4 /* OnboardingRouter.swift */,
+				4D9275532ED104E500F72EF4 /* WebViewRouter.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		4D9275372ED0AF4100F72EF4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D92754C2ED0AFD400F72EF4 /* InfoPlist.strings */,
+				4D92754D2ED0AFD400F72EF4 /* PrivacyInfo.xcprivacy */,
+				4D9275262ED0A4CC00F72EF4 /* Info.plist */,
+				4D92754E2ED0B32A00F72EF4 /* GoogleService-Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		4D9275382ED0AF5600F72EF4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D9275252ED0A4CC00F72EF4 /* Assets.xcassets */,
+				4D9275282ED0A4CC00F72EF4 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5A175954DAEA7FE64B45672A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE24C60F129EC9419272925B /* Pods-AI-5-Seconds.debug.xcconfig */,
+				82BE078DF1CFCADE8C3FC47B /* Pods-AI-5-Seconds.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D8722C571068345B385C66BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D9276442ED10D2300F72EF4 /* AI_5_Seconds_WebView.framework */,
+				4D9276412ED10D2000F72EF4 /* AI_5_Seconds_UI.framework */,
+				4D92763E2ED10D1D00F72EF4 /* AI_5_Seconds_Splash.framework */,
+				4D92763B2ED10D1B00F72EF4 /* AI_5_Seconds_Services.framework */,
+				4D9276382ED10D1800F72EF4 /* AI_5_Seconds_Paywall.framework */,
+				4D9276352ED10D1500F72EF4 /* AI_5_Seconds_Onboarding.framework */,
+				4D9276322ED10D1300F72EF4 /* AI_5_Seconds_Minor.framework */,
+				4D92762E2ED10D0F00F72EF4 /* AI_5_Seconds_Game.framework */,
+				A55F1458A5034489FEE2D848 /* Pods_AI_5_Seconds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D92750B2ED0A4C400F72EF4 /* AI-5-Seconds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D92751F2ED0A4C600F72EF4 /* Build configuration list for PBXNativeTarget "AI-5-Seconds" */;
+			buildPhases = (
+				42BFEC1D38DADD6E83E1C405 /* [CP] Check Pods Manifest.lock */,
+				4D9275082ED0A4C400F72EF4 /* Sources */,
+				4D9275092ED0A4C400F72EF4 /* Frameworks */,
+				4D92750A2ED0A4C400F72EF4 /* Resources */,
+				A2A856D3C6E44B095DA33397 /* [CP] Embed Pods Frameworks */,
+				A5F143CE3B9231EC1D632665 /* [CP] Copy Pods Resources */,
+				4D9276312ED10D0F00F72EF4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AI-5-Seconds";
+			productName = "AI-5-Seconds";
+			productReference = 4D92750C2ED0A4C400F72EF4 /* AI-5-Seconds.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D9275042ED0A4C400F72EF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					4D92750B2ED0A4C400F72EF4 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 4D9275072ED0A4C400F72EF4 /* Build configuration list for PBXProject "AI-5-Seconds" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D9275032ED0A4C400F72EF4;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4D92750D2ED0A4C400F72EF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D92750B2ED0A4C400F72EF4 /* AI-5-Seconds */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D92750A2ED0A4C400F72EF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D92752E2ED0A4CC00F72EF4 /* Assets.xcassets in Resources */,
+				4D9275302ED0A4CC00F72EF4 /* LaunchScreen.storyboard in Resources */,
+				4D92754F2ED0B32A00F72EF4 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42BFEC1D38DADD6E83E1C405 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AI-5-Seconds-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2A856D3C6E44B095DA33397 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AI-5-Seconds/Pods-AI-5-Seconds-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AI-5-Seconds/Pods-AI-5-Seconds-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AI-5-Seconds/Pods-AI-5-Seconds-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5F143CE3B9231EC1D632665 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AI-5-Seconds/Pods-AI-5-Seconds-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AI-5-Seconds/Pods-AI-5-Seconds-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AI-5-Seconds/Pods-AI-5-Seconds-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D9275082ED0A4C400F72EF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9275542ED104E500F72EF4 /* OnboardingRouter.swift in Sources */,
+				4D9275552ED104E500F72EF4 /* WebViewRouter.swift in Sources */,
+				4D9275562ED104E500F72EF4 /* RootRouter.swift in Sources */,
+				4D9275572ED104E500F72EF4 /* SplashRouter.swift in Sources */,
+				4D9275322ED0A4CC00F72EF4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D9275282ED0A4CC00F72EF4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D9275272ED0A4CC00F72EF4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4D92754C2ED0AFD400F72EF4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D9275392ED0AFD400F72EF4 /* InfoPlist.strings */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D9275202ED0A4C600F72EF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE24C60F129EC9419272925B /* Pods-AI-5-Seconds.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AI-5-Seconds/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.five.seconds.rule.deck.AI-5-Seconds";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D9275212ED0A4C600F72EF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82BE078DF1CFCADE8C3FC47B /* Pods-AI-5-Seconds.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AI-5-Seconds/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.five.seconds.rule.deck.AI-5-Seconds";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4D9275222ED0A4C600F72EF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D9275232ED0A4C600F72EF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D9275072ED0A4C400F72EF4 /* Build configuration list for PBXProject "AI-5-Seconds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D9275222ED0A4C600F72EF4 /* Debug */,
+				4D9275232ED0A4C600F72EF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D92751F2ED0A4C600F72EF4 /* Build configuration list for PBXNativeTarget "AI-5-Seconds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D9275202ED0A4C600F72EF4 /* Debug */,
+				4D9275212ED0A4C600F72EF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D9275042ED0A4C400F72EF4 /* Project object */;
+}
